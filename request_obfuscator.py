@@ -74,8 +74,7 @@ default value: [./openvpn]\n\
 
 def header_randomizer():
     """ Returns random useragent from fake_useragent library """
-    headers = {}
-    headers['User-Agent'] = UserAgent().random 
+    headers = {'User-Agent': UserAgent().random }
     return headers
 
 
