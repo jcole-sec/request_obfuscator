@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 
 from argparse import ArgumentParser, BooleanOptionalAction, RawTextHelpFormatter
 import subprocess
@@ -67,7 +66,6 @@ default value: [./openvpn]\n\
         action=BooleanOptionalAction, 
         default=False
     )    
-    #parser.set_defaults(text=False)
 
     return parser.parse_args()
 
@@ -133,7 +131,6 @@ def process_request(url, debug):
         if r.status_code == 200:
             
             request_log['response_header'] = {}
-            #request_log['response_header'] = str(r.headers)
             for k,v in r.headers.items():
              request_log['response_header'][k] = v
 
