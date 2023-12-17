@@ -68,7 +68,6 @@ default value: [./openvpn]\n\
         action=BooleanOptionalAction,
         default=False,
     )
-
     return parser.parse_args()
 
 
@@ -98,7 +97,7 @@ def openvpn_connection(openvpn_conf):
 def get_random_configuration(dir):
     """Generates a list from conf files within a directory and returns a random conf"""
     config_list = []
-    for r, d, f in os.walk(dir):
+    for r, _, f in os.walk(dir):
         for filename in f:
             if filename.endswith("ovpn"):
                 config_list.append(os.path.abspath(os.path.join(r, filename)))
