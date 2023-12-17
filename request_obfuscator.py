@@ -68,8 +68,6 @@ default value: [./openvpn]\n\
         action=BooleanOptionalAction,
         default=False,
     )
-    # parser.set_defaults(text=False)
-
     return parser.parse_args()
 
 
